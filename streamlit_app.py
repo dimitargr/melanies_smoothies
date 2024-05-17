@@ -32,7 +32,7 @@ st.write(len(ingredients_list))
 if ingredients_list:
     st.write(ingredients_list)
 
-    ingredients_string = ' '.join(ingredients_list)
+    #ingredients_string = ' '.join(ingredients_list)
 
     for fruit_chosen in ingredients_list:
         ingredients_string += fruit_chosen + ' '
