@@ -33,7 +33,7 @@ if ingredients_list:
     ingredients_string = ' '.join(ingredients_list)
 
     for fruit_chosen in ingredients_list:
-        intgredients_string += fruit_chosen + ' '
+        ingredients_string += fruit_chosen + ' '
         fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
         fv_dt = st.dataframe(data=fruityvice_response.json(), use_container_width=True)
     #st.write(ingredients_string)
