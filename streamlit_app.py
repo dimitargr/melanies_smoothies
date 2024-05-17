@@ -19,7 +19,7 @@ my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT
 #st.dataframe(data=my_dataframe, use_container_width=True)
 
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
-fv_dt = st.dataframe(data=fruityvice_response.json(), use_container_width=TRUE)
+fv_dt = st.dataframe(data=fruityvice_response.json(), use_container_width=True)
 
 #st.text(fruityvice_response.json())
 
