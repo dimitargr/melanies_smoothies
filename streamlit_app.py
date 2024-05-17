@@ -14,11 +14,14 @@ st.write(
 
 cnx = st.connection("snowflake")
 session = cnx.session()
-my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME'))
+
+#my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME'))
 #st.dataframe(data=my_dataframe, use_container_width=True)
 
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
-st.text(fruityvice_response)
+fv_dt = st.dataframe(data=fruityvice_response.json(), use_container_width=TRUE)
+
+#st.text(fruityvice_response.json())
 
 ingredients_list = st.multiselect(
     'Choose up to 5 ingredients', 
